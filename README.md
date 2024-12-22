@@ -142,3 +142,75 @@ console.log(arr.length); // 3
 ```js
 const arr = [1, 'строка', { ключ: 'значение' }, [1, 2, 3]];
 ```
+
+# Js mechanism
+
+---
+
+
+<div align="center">
+  <img src="https://miro.medium.com/v2/resize:fit:900/1*suCZqN8rjlN6MWcQs6pHhg.png" width="600px" height="300px">
+</div>
+
+
+---
+
+Деструктуризация (destructuring) в JavaScript — это удобный способ извлечения значений из массивов или свойств объектов и присваивания их переменным с помощью синтаксиса, похожего на литералы массива или объекта. Этот метод делает код более лаконичным и читаемым.
+
+### Извлечение значений из массива:
+```js
+const arr = [1, 2, 3];
+const [a, b] = arr;
+console.log(a); // 1
+console.log(b); // 2
+```
+
+### Пропуск элементов:
+```js
+const arr = [1, 2, 3];
+const [, second] = arr;
+console.log(second); // 2
+```
+
+### Деструктуризация объекта
+> Извлечение значений из объекта:
+```js
+const user = { name: 'John', age: 30 };
+const { name, age } = user;
+
+console.log(name); // 'John'
+console.log(age);  // 30
+```
+
+### Переименование переменных:
+```js
+const user = { name: 'John' };
+const { name: userName } = user;
+
+console.log(userName); // 'John'
+```
+
+### Дефолтные значения
+> Для массива:
+```js
+const arr = [1];
+const [a, b = 2] = arr;
+
+console.log(b); // 2
+```
+
+> Для объекта:
+```js
+const user = { name: 'John' };
+const { age = 25 } = user;
+
+console.log(age); // 25
+```
+
+---
+
+<div align="center">
+  <img src="https://a.d-cd.net/fGkj61MC91njUbKjZUahzEm1-IA-960.jpg" width="600px" height="300px">
+</div>
+
+---
